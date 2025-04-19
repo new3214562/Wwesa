@@ -21,7 +21,22 @@ from requests import Session,post,get
 from pystyle import Center, Anime, Colors, Colorate
 from colorama import Fore 
 from pystyle import Add, Center, Anime, Colors, Colorate, Write, System
+from flask import Flask
+from threading import Thread
 
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "I'm alive!"
+
+def run():
+    app.run(host='0.0.0.0', port=8080)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
 
 
 headers = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36 Edg/95.0.1020.38"}
@@ -269,4 +284,6 @@ def SMS(phone, amount):
                 executor.submit(api15, phone)
                 executor.submit(api25, phone)
 
+
 bot.run(TOKEN)
+keep_alive()
