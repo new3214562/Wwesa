@@ -1,0 +1,9 @@
+requests
+flask
+pystyle
+gratient
+nextcord
+bs4
+user_agent
+colorama
+gunicorn
