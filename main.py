@@ -46,7 +46,7 @@ t = f.write(proxy)
 g = open("proxy.txt", "r")
 s = g.read().splitlines()
 
-TOKEN = "MTEzMDUyMTUwNjgxMjgwNTE5MA.G7k8qj.vQYQvfI4b5nU79LacE-6gk0CTt9jWah5BLsVfs"
+TOKEN = "MTEzMDUyMTUwNjgxMjgwNTE5MA.GTHsCj.bNSDtL0WTXWhL0IqWOtsrLc6_6WYqAab7Q_yZ8"
 intents = nextcord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents)
 
